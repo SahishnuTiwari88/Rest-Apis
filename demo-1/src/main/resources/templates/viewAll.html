@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border = "1">
+<tr>
+<th>Person ID</th>
+<th>Person Name</th>
+<th>Person Job</th>
+<th>Update</th>
+<th>Delete</th>
+</tr>
+<tr th:each="p:${ps}">
+<td><label th:text="${p.pid}"/></td>
+<td><label th:text="${p.pname}"/></td>
+<td><label th:text="${p.pjob}"/></td>
+<td><a th:href="@{'update/'+${p.pid}}">update</a></td>
+<td><a th:href="@{'delete/'+${p.pid}}">delete</a></td>
+<!-- <td><a th:href="@/'+${p.pid}}">update</a></td> -->
+
+</tr>
+
+</table>
+
+</body>
+</html>

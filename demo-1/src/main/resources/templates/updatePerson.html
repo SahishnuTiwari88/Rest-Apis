@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "/updateMe" method="post">
+<table>
+<tr>
+<td><label for="PID">Person ID</label></td>
+<td><input type="text" name="pid" th:value="${person.pid}" readonly></input></td>
+</tr>
+
+<tr>
+<td><label for="pname">Person Name</label></td>
+<td><input type="text" name="pname" th:value="${person.pname}" ></input></td>
+</tr>
+
+<tr>
+<td><label for="pjob">Person Job</label></td>
+<td><input type="text" name="pjob" th:value="${person.pjob}"></input></td>
+</tr>
+
+<tr>
+
+<td><input type="submit" value="Submit"></input></td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>
