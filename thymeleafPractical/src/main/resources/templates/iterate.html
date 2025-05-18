@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Traverse elements of the collection...</h1>
+	<h2 th:text="${name}"></h2>
+
+	<ul>
+		<li th:each="n,i : ${name}">
+		<span th:text=" ${i.index} +' '+ ${n}"></span></li>
+	</ul>
+
+</body>
+</html>

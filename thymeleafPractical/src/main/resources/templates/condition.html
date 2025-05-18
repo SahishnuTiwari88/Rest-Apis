@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Conditional Statement in thymeleaf</title>
+</head>
+<body>
+	<h1>Conditional Statement in thymeleaf</h1>
+	<h2>
+		<span th:style="${isActive} ? 'color:green':'color:red'"
+			th:text="${isActive} ? 'Active' : 'Not Active'"></span>
+	</h2>
+
+	<h1 th:if="${gender}=='M'">Male</h1>
+	<h1 th:unless="${gender}=='M'">Female</h1>
+
+	<div th:switch="${#lists.size(mylist)}">
+
+		<h2 th:case="'0'">List is Empty</h2>
+		<h2 th:case="'1'">List has one element</h2>
+		<h2 th:case="*">List has more than 2 elements</h2>
+		<!-- * shows default case -->
+	</div>
+
+</body>
+</html>

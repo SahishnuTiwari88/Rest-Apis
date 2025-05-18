@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>This is about us page</h1>
+<h1>We are learning thymeleaf use in springboot</h1>
+<h1 th:text="${name}"></h1>
+<h2 >Owner name is :  <b th:text="${#strings.toUpperCase(name)}"></b></h2>
+ 
+<!-- when we have to use the pre-defined function then we use # symbol followed by the class name -->
+<div th:with ="a=5, b=67, n=${name}">
+<h1>value of a is :<span th:text="${a}"></span></h1>
+<h1>value of n is :<span th:text="${n}"></span></h1>
+<h2 th:text = "'The sum of ' +${a}+ ' and ' +${b}+ ' is ' +${a+b}"></h2>
+
+</div>
+
+</body>
+</html>
