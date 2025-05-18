@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Bank Branch</title>
+</head>
+
+<body style="text-align: center;">
+	<h1 th:text="${BankName}"></h1>
+	
+	<table style="margin-left: auto; margin-right: auto">
+		<thead>
+			<tr>
+				<th>Bank Branch</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="bankbranch : ${Branch}">
+				<td th:text="${bankbranch}"></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</body>
+
+</html>

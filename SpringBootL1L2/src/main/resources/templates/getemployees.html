@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>List Of Employees</title>
+
+</head>
+<body>
+
+	<table style="margin-left: auto; margin-right: auto">
+		<tr>
+			<th>ID</th>
+			<th>Employee Name</th>
+			<th>Employee Email</th>
+			<th>Employee Location</th>
+
+		</tr>
+		<tr th:each="emp:${emplist}">
+			<td th:text="${emp.eid}"></td>
+			<td th:text="${emp.ename}"></td>
+			<td th:text="${emp.email}"></td>
+			<td th:text="${emp.elocation}"></td>
+			<td>
+				<form th:action="@{empid/{eid}(eid=${emp.eid})}">
+					<button type="submit">Employee By Id</button>
+				</form>
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Detail on ID </title>
+</head>
+<body style="text-align: center">
+	<h1>Employee Detail Based on ID</h1>
+	<table style="margin-left: auto; margin-right: auto">
+		<tr>
+			<th>Employee ID</th>
+			<th>Employee Name</th>
+			<th>Employee Email</th>
+			<th>Employee Address</th>
+		</tr>
+		<tr>
+
+			<td th:text="${emp.eid}"></td>
+			<td th:text="${emp.ename}"></td>
+			<td th:text="${emp.email}"></td>
+			<td th:text="${emp.elocation}"></td>
+		</tr>
+	</table>
+	<a th:href="@{/register}" class="btn btn-primary"><button>Go to Home</button></a>
+	
+</body>
+</html>
